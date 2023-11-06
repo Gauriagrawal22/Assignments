@@ -4,13 +4,13 @@
 
 int main() {
 
-    int a1[10];
+    int a1[5];
 
     
 
-    printf("Enter 10 elements:\n");
+    printf("Enter 5 elements:\n");
 
-    for (int i = 0; i < 10; i++) {
+    for (int i = 0; i < 5; i++) {
 
         scanf("%d", &a1[i]);
 
@@ -18,13 +18,25 @@ int main() {
 
 
 
-    printf("Elements in reverse order:\n");
+    
 
-    for (int i = 9; i >= 0; i--) {
+    int max = a1[0];
 
-        printf("%d\n", a1[i]);
+
+
+    for (int i = 1; i < 5; i++) {
+
+        if (a1[i] > max) {
+
+            max = a1[i];
+
+        }
 
     }
+
+
+
+    printf("The maximum number in the array is: %d\n", max);
 
 
 
